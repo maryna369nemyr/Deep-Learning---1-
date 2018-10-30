@@ -1,0 +1,3 @@
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/i2dl_ss2018
+./submit_exercise.sh 2 s1114

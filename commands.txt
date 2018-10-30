@@ -1,0 +1,36 @@
+mkdir ~/.ssh/
+mv i2dl_ss2018 ~/.ssh/
+chmod 700 ~/.ssh/ && chmod 600 ~/.ssh/i2dl_ss2018
+ssh-add ~/.ssh/i2dl_ss2018
+git clone git@gitlab.lrz.de:i2dl/i2dl.git
+
+
+ll
+cd i2dl/
+ls
+nano README.md
+ls exercise_0
+git pull origin master
+git submodule update --init -- exercise_1 
+//error
+git submodule update --init -- exercise_0
+cd exercise_0
+./download_datasets.sh
+//
+export PATH=~/anaconda3/bin:$PATH
+//in the director exercise_0/exercise_code/
+subl test_class.py //(CTRL X Yes Enter)
+nano test_class.py
+
+
+#Submission
+ cd ..
+ eval "$(ssh-agent -s)"
+ ssh-add ~/.ssh/i2dl_ss2018
+ ./submit_exercise.sh 1 s1114
+======================
+chmod 700 ~/.ssh/ && chmod 600 ~/.ssh/i2dl_ss2018
+ eval "$(ssh-agent -s)"
+ ssh-add ~/.ssh/i2dl_ss2018
+git pull origin master
+git submodule update --init -- exercise_0
